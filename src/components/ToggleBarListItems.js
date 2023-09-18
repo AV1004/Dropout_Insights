@@ -7,29 +7,34 @@ import Login from "./ToggleBarListIcons/Login";
 
 export default function ToggleBarListItems() {
   const [dashboard, setDashboard] = useState({
-    bgColor: "#267DFF",
-    padding: "px-10",
-    class: "bg-[#267DFF]",
+    bgColor: "#DBE7FD",
+    padding: "pl-10",
+    class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+    color: "#267DFF",
   });
   const [schoolList, setSchoolList] = useState({
     bgColor: "#267DFF",
     padding: "px-10",
     class: "bg-[#267DFF]",
+    color: "#DBE7FD",
   });
   const [analysis, setAnalysis] = useState({
     bgColor: "#267DFF",
     padding: "px-10",
     class: "bg-[#267DFF]",
+    color: "#DBE7FD",
   });
   const [register, setRegister] = useState({
     bgColor: "#267DFF",
     padding: "px-10",
     class: "bg-[#267DFF]",
+    color: "#DBE7FD",
   });
   const [login, setLogin] = useState({
     bgColor: "#267DFF",
     padding: "px-10",
     class: "bg-[#267DFF]",
+    color: "#DBE7FD",
   });
 
   const handleDashboard = () => {
@@ -37,26 +42,31 @@ export default function ToggleBarListItems() {
       bgColor: "#DBE7FD",
       padding: "pl-10",
       class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      color: "#267DFF",
     });
     setSchoolList({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setAnalysis({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setRegister({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setLogin({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
   };
   const handleSchoolList = () => {
@@ -64,26 +74,31 @@ export default function ToggleBarListItems() {
       bgColor: "#DBE7FD",
       padding: "pl-10",
       class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      color: "#267DFF",
     });
     setDashboard({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setAnalysis({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setRegister({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setLogin({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
   };
   const handleAnalysis = () => {
@@ -91,26 +106,31 @@ export default function ToggleBarListItems() {
       bgColor: "#DBE7FD",
       padding: "pl-10",
       class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      color: "#267DFF",
     });
     setDashboard({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setSchoolList({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setRegister({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setLogin({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
   };
   const handleRegister = () => {
@@ -118,26 +138,31 @@ export default function ToggleBarListItems() {
       bgColor: "#DBE7FD",
       padding: "pl-10",
       class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      color: "#267DFF",
     });
     setDashboard({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setSchoolList({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setAnalysis({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setLogin({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
   };
   const handleLogin = () => {
@@ -145,26 +170,31 @@ export default function ToggleBarListItems() {
       bgColor: "#DBE7FD",
       padding: "pl-10",
       class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      color: "#267DFF",
     });
     setDashboard({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setSchoolList({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setAnalysis({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
     setRegister({
       bgColor: "#267DFF",
       padding: "px-10",
       class: "bg-[#267DFF]",
+      color: "#DBE7FD",
     });
   };
 
@@ -175,8 +205,11 @@ export default function ToggleBarListItems() {
           className={`bg-[#267DFF] text-[#FFFFFF] text-2xl font-medium  ${dashboard.padding} flex py-6`}
         >
           <div className={dashboard.class}>
-            <button onClick={handleDashboard} className="flex">
-              <Dashboard changeBG={dashboard.bgColor} />
+            <button
+              onClick={handleDashboard}
+              className={`flex text-[${dashboard.color}]`}
+            >
+              <Dashboard changeBG={dashboard.bgColor} color={dashboard.color} />
               {"Dashboard"}
             </button>
           </div>
@@ -185,8 +218,14 @@ export default function ToggleBarListItems() {
           className={`bg-[#267DFF] text-[#FFFFFF] text-2xl font-medium ${schoolList.padding} flex py-6`}
         >
           <div className={schoolList.class}>
-            <button onClick={handleSchoolList} className="flex">
-              <SchoolList changeBG={schoolList.bgColor} />
+            <button
+              onClick={handleSchoolList}
+              className={`flex text-[${schoolList.color}]`}
+            >
+              <SchoolList
+                changeBG={schoolList.bgColor}
+                color={schoolList.color}
+              />
               {"School List"}
             </button>
           </div>
@@ -195,8 +234,11 @@ export default function ToggleBarListItems() {
           className={`bg-[#267DFF] text-[#FFFFFF] text-2xl font-medium ${analysis.padding} flex py-6`}
         >
           <div className={analysis.class}>
-            <button onClick={handleAnalysis} className="flex">
-              <Analysis changeBG={analysis.bgColor} />
+            <button
+              onClick={handleAnalysis}
+              className={`flex text-[${analysis.color}]`}
+            >
+              <Analysis changeBG={analysis.bgColor} color={analysis.color} />
               {"Analysis"}
             </button>
           </div>
@@ -205,8 +247,11 @@ export default function ToggleBarListItems() {
           className={`bg-[#267DFF] text-[#FFFFFF] text-2xl font-medium ${register.padding} flex py-6`}
         >
           <div className={register.class}>
-            <button onClick={handleRegister} className="flex">
-              <Register changeBG={register.bgColor} />
+            <button
+              onClick={handleRegister}
+              className={`flex text-[${register.color}]`}
+            >
+              <Register changeBG={register.bgColor} color={register.color} />
               {"Register"}
             </button>
           </div>
@@ -215,8 +260,11 @@ export default function ToggleBarListItems() {
           className={`bg-[#267DFF] text-[#FFFFFF] text-2xl font-medium ${login.padding} flex py-6`}
         >
           <div className={login.class}>
-            <button onClick={handleLogin} className="flex">
-              <Login changeBG={login.bgColor} />
+            <button
+              onClick={handleLogin}
+              className={`flex text-[${login.color}]`}
+            >
+              <Login changeBG={login.bgColor} color={login.color} />
               {"Login"}
             </button>
           </div>
