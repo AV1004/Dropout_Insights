@@ -202,7 +202,7 @@ export default function ToggleBarListItems() {
     <div className="bg-[#267DFF] h-[29.8rem]  2xl:h-[35rem] rounded-br-3xl">
       <ul>
         <li
-          className={`bg-[#267DFF] text-[#FFFFFF] text-2xl font-medium  ${dashboard.padding} flex py-6`}
+          className={`bg-[rgb(38,125,255)] text-[#FFFFFF] text-2xl font-medium  ${dashboard.padding} flex py-6`}
         >
           <div className={dashboard.class}>
             <button
@@ -273,3 +273,4 @@ export default function ToggleBarListItems() {
     </div>
   );
 }
+// NicE CODE!!
