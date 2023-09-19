@@ -6,6 +6,7 @@ import SchoolListView from "./components/ToggleBarListSeparateItem/SchoolListVie
 import AnalysisView from "./components/ToggleBarListSeparateItem/AnalysisView";
 import RegisterView from "./components/ToggleBarListSeparateItem/RegisterView";
 import LoginView from "./components/ToggleBarListSeparateItem/LoginView";
+import LanguageButton from "./components/Language/LanguageButton";
 
 function App() {
   const [showContent, setShowContent] = useState({
@@ -68,7 +69,12 @@ function App() {
     </div>
   );
 
-  return <div>{renderContent}</div>;
+  return (
+    <div>
+      <LanguageButton />
+      <div>{renderContent}</div>
+    </div>
+  );
 }
 
 export default App;
