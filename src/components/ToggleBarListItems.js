@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import Dashboard from "./ToggleBarListIcons/Dashboard";
-import SchoolList from "./ToggleBarListIcons/SchoolList";
-import Analysis from "./ToggleBarListIcons/Analysis";
-import Register from "./ToggleBarListIcons/Register";
-import Login from "./ToggleBarListIcons/Login";
+import DashboardIcon from "./ToggleBarListIcons/DashboardIcon";
+import SchoolListIcon from "./ToggleBarListIcons/SchoolListIcon";
+import AnalysisIcon from "./ToggleBarListIcons/AnalysisIcon";
+import RegisterIcon from "./ToggleBarListIcons/RegisterIcon";
+import LoginIcon from "./ToggleBarListIcons/LoginIcon";
 
-export default function ToggleBarListItems() {
+export default function ToggleBarListItems(props) {
+  // States to handle design of toggle menu items
   const [dashboard, setDashboard] = useState({
     bgColor: "#DBE7FD",
     padding: "pl-10",
-    class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+    class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
     color: "#267DFF",
   });
   const [schoolList, setSchoolList] = useState({
@@ -37,11 +38,12 @@ export default function ToggleBarListItems() {
     color: "#DBE7FD",
   });
 
+  // Function to swtich designs from one to another toggle items
   const handleDashboard = () => {
     setDashboard({
       bgColor: "#DBE7FD",
       padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
       color: "#267DFF",
     });
     setSchoolList({
@@ -73,7 +75,7 @@ export default function ToggleBarListItems() {
     setSchoolList({
       bgColor: "#DBE7FD",
       padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
       color: "#267DFF",
     });
     setDashboard({
@@ -105,7 +107,7 @@ export default function ToggleBarListItems() {
     setAnalysis({
       bgColor: "#DBE7FD",
       padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
       color: "#267DFF",
     });
     setDashboard({
@@ -137,7 +139,7 @@ export default function ToggleBarListItems() {
     setRegister({
       bgColor: "#DBE7FD",
       padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
       color: "#267DFF",
     });
     setDashboard({
@@ -169,7 +171,7 @@ export default function ToggleBarListItems() {
     setLogin({
       bgColor: "#DBE7FD",
       padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[13.9rem] p-4 rounded-tl-3xl rounded-bl-3xl",
+      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
       color: "#267DFF",
     });
     setDashboard({
@@ -198,18 +200,29 @@ export default function ToggleBarListItems() {
     });
   };
 
+  // Funtion to send selected Item to Parent(here = > ToggleBar) Components
+  const handleOnclicktoSelectItems = (ItemName) => {
+    props.tosetSelectedItem(ItemName);
+  };
+
   return (
     <div className="bg-[#267DFF] h-[29.8rem]  2xl:h-[35rem] rounded-br-3xl">
       <ul>
         <li
-          className={`bg-[rgb(38,125,255)] text-[#FFFFFF] text-2xl font-medium  ${dashboard.padding} flex py-6`}
+          className={`bg-[#267DFF] text-[#FFFFFF]   text-2xl font-medium  ${dashboard.padding} flex py-6`}
         >
           <div className={dashboard.class}>
             <button
-              onClick={handleDashboard}
-              className={`flex text-[${dashboard.color}]`}
+              onClick={() => {
+                handleDashboard();
+                handleOnclicktoSelectItems("Dashboard");
+              }}
+              className={`flex ml-6  text-[${dashboard.color}]`}
             >
-              <Dashboard changeBG={dashboard.bgColor} color={dashboard.color} />
+              <DashboardIcon
+                changeBG={dashboard.bgColor}
+                color={dashboard.color}
+              />
               {"Dashboard"}
             </button>
           </div>
@@ -219,10 +232,13 @@ export default function ToggleBarListItems() {
         >
           <div className={schoolList.class}>
             <button
-              onClick={handleSchoolList}
-              className={`flex text-[${schoolList.color}]`}
+              onClick={() => {
+                handleSchoolList();
+                handleOnclicktoSelectItems("SchoolList");
+              }}
+              className={`flex ml-6 text-[${schoolList.color}]`}
             >
-              <SchoolList
+              <SchoolListIcon
                 changeBG={schoolList.bgColor}
                 color={schoolList.color}
               />
@@ -235,10 +251,16 @@ export default function ToggleBarListItems() {
         >
           <div className={analysis.class}>
             <button
-              onClick={handleAnalysis}
-              className={`flex text-[${analysis.color}]`}
+              onClick={() => {
+                handleAnalysis();
+                handleOnclicktoSelectItems("Analysis");
+              }}
+              className={`flex ml-6 text-[${analysis.color}]`}
             >
-              <Analysis changeBG={analysis.bgColor} color={analysis.color} />
+              <AnalysisIcon
+                changeBG={analysis.bgColor}
+                color={analysis.color}
+              />
               {"Analysis"}
             </button>
           </div>
@@ -248,10 +270,16 @@ export default function ToggleBarListItems() {
         >
           <div className={register.class}>
             <button
-              onClick={handleRegister}
-              className={`flex text-[${register.color}]`}
+              onClick={() => {
+                handleRegister();
+                handleOnclicktoSelectItems("Register");
+              }}
+              className={`flex ml-6 text-[${register.color}]`}
             >
-              <Register changeBG={register.bgColor} color={register.color} />
+              <RegisterIcon
+                changeBG={register.bgColor}
+                color={register.color}
+              />
               {"Register"}
             </button>
           </div>
@@ -261,10 +289,13 @@ export default function ToggleBarListItems() {
         >
           <div className={login.class}>
             <button
-              onClick={handleLogin}
-              className={`flex text-[${login.color}]`}
+              onClick={() => {
+                handleLogin();
+                handleOnclicktoSelectItems("Login");
+              }}
+              className={`flex ml-6 text-[${login.color}]`}
             >
-              <Login changeBG={login.bgColor} color={login.color} />
+              <LoginIcon changeBG={login.bgColor} color={login.color} />
               {"Login"}
             </button>
           </div>
