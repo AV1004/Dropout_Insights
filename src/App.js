@@ -15,45 +15,23 @@ function App() {
   });
 
   const ShowMainContent = (selectedItem) => {
-    switch (selectedItem) {
-      case "Dashboard":
-        setShowContent({
-          condition: true,
-          render: <DashboardView />,
-        });
-        break;
-      case "SchoolList":
-        setShowContent({
-          condition: true,
-          render: <SchoolListView />,
-        });
-        break;
-      case "Analysis":
-        setShowContent({
-          condition: true,
-          render: <AnalysisView />,
-        });
-        break;
-      case "Register":
-        setShowContent({
-          condition: false,
-          render: <RegisterView />,
-        });
-        break;
-      case "Login":
-        setShowContent({
-          condition: false,
-          render: <LoginView />,
-        });
-        break;
-      default:
-        setShowContent({
-          condition: true,
-          render: <DashboardView />,
-        });
-        break;
+    if (selectedItem === "Dashboard") {
+      setShowContent({ condition: true, render: <DashboardView /> });
+    } else if (selectedItem === "SchoolList") {
+      setShowContent({ condition: true, render: <SchoolListView /> });
+    } else if (selectedItem === "Analysis") {
+      setShowContent({ condition: true, render: <AnalysisView /> });
+    } else if (selectedItem === "Login") {
+      setShowContent({
+        condition: false,
+        render: <LoginView backToHome={ShowMainContent} />,
+      });
+    } else {
+      setShowContent({
+        condition: false,
+        render: <RegisterView backToHome={ShowMainContent} />,
+      });
     }
-    console.log(showContent);
   };
 
   const renderContent = (

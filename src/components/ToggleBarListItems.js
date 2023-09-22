@@ -135,70 +135,6 @@ export default function ToggleBarListItems(props) {
       color: "#DBE7FD",
     });
   };
-  const handleRegister = () => {
-    setRegister({
-      bgColor: "#DBE7FD",
-      padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
-      color: "#267DFF",
-    });
-    setDashboard({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-    setSchoolList({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-    setAnalysis({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-    setLogin({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-  };
-  const handleLogin = () => {
-    setLogin({
-      bgColor: "#DBE7FD",
-      padding: "pl-10",
-      class: "bg-[#DBE7FD] w-[17.4rem] p-6 rounded-tl-3xl rounded-bl-3xl",
-      color: "#267DFF",
-    });
-    setDashboard({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-    setSchoolList({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-    setAnalysis({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-    setRegister({
-      bgColor: "#267DFF",
-      padding: "px-10",
-      class: "bg-[#267DFF]",
-      color: "#DBE7FD",
-    });
-  };
 
   // Funtion to send selected Item to Parent(here = > ToggleBar) Components
   const handleOnclicktoSelectItems = (ItemName) => {
@@ -271,7 +207,6 @@ export default function ToggleBarListItems(props) {
           <div className={register.class}>
             <button
               onClick={() => {
-                handleRegister();
                 handleOnclicktoSelectItems("Register");
               }}
               className={`flex ml-6 text-[${register.color}]`}
@@ -290,7 +225,6 @@ export default function ToggleBarListItems(props) {
           <div className={login.class}>
             <button
               onClick={() => {
-                handleLogin();
                 handleOnclicktoSelectItems("Login");
               }}
               className={`flex ml-6 text-[${login.color}]`}
