@@ -32,10 +32,79 @@ export default function RegisterView(props) {
       ></img>
 
       <div className="flex bg-[#C8DBFF] flex-col justify-center rounded-tr-3xl items-center rounded-[0 31px 31px 0]">
-        <form className=" flex flex-col bg-[#C8DBFF] rounded-br-3x space-y-4">
+        <form className=" flex flex-col bg-[#C8DBFF] rounded-br-3x space-y-3 ">
           <h1 className="bg-[#C8DBFF] text-4xl font-semibold bottom-[1rem] relative ">
-            Register{" "}
+            Register Your School{" "}
           </h1>
+          <div className="flex  bg-[#C8DBFF] ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              className="bg-[#267DFF] p-3 w-12 h-12 rounded-l-xl"
+            >
+              <g clip-path="url(#clip0_161_43)">
+                <g filter="url(#filter0_d_161_43)">
+                  <path
+                    d="M13.006 9.16302C13.006 8.40302 13.622 7.78802 14.381 7.78802H17.686C22.237 7.78802 25.964 11.425 25.964 15.958C25.964 20.489 22.237 24.127 17.686 24.127H14.38C13.62 24.127 13.005 23.511 13.005 22.752V9.16202L13.006 9.16302ZM15.756 21.252C15.756 21.321 15.812 21.377 15.881 21.377H17.686C20.76 21.377 23.214 18.93 23.214 15.957C23.214 12.984 20.76 10.537 17.686 10.537H15.88C15.8635 10.537 15.8472 10.5403 15.8319 10.5466C15.8167 10.553 15.8029 10.5623 15.7913 10.574C15.7796 10.5857 15.7705 10.5996 15.7642 10.6149C15.758 10.6302 15.7549 10.6465 15.755 10.663L15.756 21.252ZM9.385 7.89002C9.56561 7.88963 9.74452 7.92485 9.9115 7.99366C10.0785 8.06247 10.2303 8.16352 10.3582 8.29104C10.486 8.41857 10.5875 8.57005 10.6568 8.73683C10.7261 8.90361 10.7619 9.08242 10.762 9.26302L10.776 22.648C10.7764 23.0127 10.6319 23.3626 10.3743 23.6207C10.1168 23.8789 9.76718 24.0241 9.4025 24.0245C9.03783 24.0249 8.68793 23.8804 8.42979 23.6229C8.17165 23.3653 8.0264 23.0157 8.026 22.651L8.012 9.26602C8.01174 9.08546 8.04704 8.90661 8.1159 8.73968C8.18476 8.57276 8.28582 8.42103 8.41332 8.29317C8.54081 8.1653 8.69224 8.0638 8.85896 7.99446C9.02569 7.92511 9.20443 7.89029 9.385 7.89002Z"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    d="M6 1C5.34339 1 4.69321 1.12933 4.08658 1.3806C3.47995 1.63188 2.92876 2.00017 2.46447 2.46447C1.52678 3.40215 1 4.67392 1 6V26C1 27.3261 1.52678 28.5979 2.46447 29.5355C2.92876 29.9998 3.47995 30.3681 4.08658 30.6194C4.69321 30.8707 5.34339 31 6 31H26C27.3261 31 28.5979 30.4732 29.5355 29.5355C30.4732 28.5979 31 27.3261 31 26V6C31 5.34339 30.8707 4.69321 30.6194 4.08658C30.3681 3.47995 29.9998 2.92876 29.5355 2.46447C29.0712 2.00017 28.52 1.63188 27.9134 1.3806C27.3068 1.12933 26.6566 1 26 1H6ZM3 6C3 5.20435 3.31607 4.44129 3.87868 3.87868C4.44129 3.31607 5.20435 3 6 3H26C26.7956 3 27.5587 3.31607 28.1213 3.87868C28.6839 4.44129 29 5.20435 29 6V26C29 26.7956 28.6839 27.5587 28.1213 28.1213C27.5587 28.6839 26.7956 29 26 29H6C5.20435 29 4.44129 28.6839 3.87868 28.1213C3.31607 27.5587 3 26.7956 3 26V6Z"
+                    fill="#FEFEFE"
+                  />
+                </g>
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_161_43"
+                  x="-3"
+                  y="1"
+                  width="38"
+                  height="38"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="4" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_161_43"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_161_43"
+                    result="shape"
+                  />
+                </filter>
+                <clipPath id="clip0_161_43">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <input
+              className="bg-white w-72 rounded-r-xl p-3"
+              type="text"
+              placeholder="Enter School ID"
+              required
+            />
+          </div>
           <div className="flex  bg-[#C8DBFF] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +126,7 @@ export default function RegisterView(props) {
             <input
               className="bg-white w-72 rounded-r-xl p-3"
               type="text"
-              placeholder="Enter Your Username"
+              placeholder="Enter SchoolName"
               required
             />
           </div>
@@ -80,7 +149,7 @@ export default function RegisterView(props) {
             <input
               className="bg-white w-72 rounded-r-xl p-3 "
               type="email"
-              placeholder="Enter Your Email"
+              placeholder="Enter School Email"
               required
             />
           </div>
@@ -145,8 +214,8 @@ export default function RegisterView(props) {
               Register
             </button>
           </div>
-          <span className=" bg-[#C8DBFF] cursor-pointer font-thin relative top-10 hover:underline text-[#267DFF]">
-            Create an Account?
+          <span className=" bg-[#C8DBFF] cursor-pointer font-thin relative top-7 hover:underline text-[#267DFF]">
+            Already have an Account?
           </span>
         </form>
       </div>
