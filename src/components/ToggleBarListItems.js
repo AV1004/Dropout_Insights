@@ -142,7 +142,7 @@ export default function ToggleBarListItems(props) {
   };
 
   return (
-    <div className="bg-[#267DFF] h-[29.8rem]  2xl:h-[35rem] rounded-br-3xl">
+    <div className="bg-[#267DFF] h-[29.8rem]  2xl:h-[34.5rem] rounded-br-3xl">
       <ul>
         <li
           className={`bg-[#267DFF] text-[#FFFFFF]   text-2xl font-medium  ${dashboard.padding} flex py-6`}

@@ -12,7 +12,7 @@ export default function ToggleBar(props) {
   };
 
   return (
-    <div className="flex flex-col float-left">
+    <div className="flex fixed flex-col float-left">
       <ToggleBarLogo />
       <ToggleBarListItems tosetSelectedItem={toGetSelecedItem} />
     </div>

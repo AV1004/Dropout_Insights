@@ -7,7 +7,7 @@ export default function ToggleBarLogo() {
       <img
         src={Logo}
         alt="Dropout Insights"
-        className="bg-[#267DFF] w-56 text-white font-bold  text-3xl  py-10"
+        className="bg-[#267DFF] w-56 text-white font-bold  text-3xl  pb-10"
       ></img>
     </div>
   );

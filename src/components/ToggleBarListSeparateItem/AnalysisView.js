@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AnalysisCharts from "./Charts/AnalysisChartPie";
+import AnalysisCharts from "./Charts/AnalysisChart";
 
 export default function AnalysisView() {
   const AnalyzedStudentData = [
@@ -185,70 +185,59 @@ export default function AnalysisView() {
     },
   ];
 
-  //Reason Filterd Array
-  const [reasonSpecificData, setReasonSpecificData] = useState(
-    AnalyzedStudentData.filter((data) => data.Reason === "Poverty")
+  const povertyData = AnalyzedStudentData.filter(
+    (data) => data.Reason === "Poverty"
   );
-
-  // State to handle selected reasons
-  const [selectedReason, setSelectedReason] = useState("Poverty");
-
-
-  const selectReasonHandler = (event) => {
-    let conditionCheck = event.target.value;
-    setSelectedReason(conditionCheck);
-    // console.log(conditionCheck);
-    if (conditionCheck === "Poverty") {
-      setReasonSpecificData(
-        AnalyzedStudentData.filter((data) => data.Reason === "Poverty")
-      );
-    } else if (conditionCheck === "Seasonal Migration") {
-      setReasonSpecificData(
-        AnalyzedStudentData.filter(
-          (data) => data.Reason === "Seasonal Migration"
-        )
-      );
-    } else if (conditionCheck === "Orphan") {
-      setReasonSpecificData(
-        AnalyzedStudentData.filter((data) => data.Reason === "Orphan")
-      );
-    } else {
-      setReasonSpecificData(
-        AnalyzedStudentData.filter(
-          (data) => data.Reason === "Poor quality of MDM"
-        )
-      );
-    }
-  };
-
-  console.log(selectedReason);
-  console.log(reasonSpecificData);
+  const SMData = AnalyzedStudentData.filter(
+    (data) => data.Reason === "Seasonal Migration"
+  );
+  const orphanData = AnalyzedStudentData.filter(
+    (data) => data.Reason === "Orphan"
+  );
+  const MDMData = AnalyzedStudentData.filter(
+    (data) => data.Reason === "Poor quality of MDM"
+  );
 
   return (
     <div>
-      <select
-        onChange={selectReasonHandler}
-        className="border-2 border-black rounded-2xl top-32 left-[75rem] absolute bg-[#267DFF] py-2 px-4 text-white "
-        name="Filter"
-        id="selectFilter"
-      >
-        <option className="text-black" value="Poverty">
-          Poverty
-        </option>
-        <option className="text-black" value="Seasonal Migration">
-          Seasonal Migration
-        </option>
-        <option className="text-black" value="Orphan">
-          Orphan
-        </option>
-        <option className="text-black" value="Poor quality of MDM">
-          Poor quality of MDM
-        </option>
-      </select>
       <h1 className="text-4xl absolute text-[#267DFF] font-sans font-semibold top-16 left-[22rem]">
         Overall Analysis
       </h1>
-      <AnalysisCharts FilteredAnalyzedStudentData={reasonSpecificData} />
+      <div>
+        {/* <div className="h-[38rem] w-[60rem]  text-[#267DFF] bg-[#C8DBFF] absolute  left-[30.5rem] top-28 rounded-[2rem] drop-shadow-2xl  grid-cols-2 "> */}
+        <div className="h-[38rem] w-[60rem]  text-[#267DFF]  absolute  left-[30.5rem] top-28   grid-cols-2 ">
+          <div className="flex mt-[5.5rem] ml-[9rem] h-36 ">
+            <h1 className=" absolute right-[41.5rem] text-[2rem] top-4">
+              Poverty
+            </h1>
+            <AnalysisCharts ML={""} FilteredAnalyzedStudentData={povertyData} />
+            <h1 className=" absolute right-[6rem] text-[2rem] top-4">
+              Seasonal Migration
+            </h1>
+            <AnalysisCharts
+              FilteredAnalyzedStudentData={SMData}
+              ML={"ml-[10rem]"}
+            />
+          </div>
+          <div className="flex mt-[9.5rem] ml-[9rem] h-36">
+            <h1 className=" absolute right-[41.5rem] text-[2rem] top-[20rem]">
+              Orphan
+            </h1>
+            <AnalysisCharts ML={""} FilteredAnalyzedStudentData={orphanData} />
+            <h1 className=" absolute right-[5rem] text-[2rem] top-[20rem]">
+              Poor quality of MDM
+            </h1>
+            <AnalysisCharts
+              ML={"ml-[10rem]"}
+              FilteredAnalyzedStudentData={MDMData}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
+
+// FilteredAnalyzedStudentData={reasonSpecificData}
+// FilteredAnalyzedStudentData={reasonSpecificData}
+// FilteredAnalyzedStudentData={reasonSpecificData}

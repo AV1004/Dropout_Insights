@@ -36,14 +36,10 @@ export default function AnalysisCharts(props) {
   };
 
   return (
-    <div className="h-[30rem] w-[60rem] text-[#267DFF] bg-[#C8DBFF] absolute  left-[30rem] top-52 rounded-[2rem] drop-shadow-2xl grid grid-rows-2 ">
-      <div className="grid grid-cols-3 text-[#267DFF] ml-40 m-8 bg-[#C8DBFF]">
-        <PieChart FilteredStudentData={studentFilterData} />
-        <LineChart FilteredStudentData={studentFilterDataBarLine} />
-      </div>
-      <div className="text-[#267DFF] bg-[#C8DBFF] m-4 h-[12.5rem] pb-4 w-[25rem] ml-[17rem]">
-        <BarChart FilteredStudentData={studentFilterDataBarLine} />
-      </div>
+    <div
+      className={`grid grid-cols-3 text-[#267DFF] h-[13rem] w-[30rem] ${props.ML} `}
+    >
+      <PieChart FilteredStudentData={studentFilterData} />
     </div>
   );
 }
